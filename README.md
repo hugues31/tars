@@ -6,6 +6,7 @@ TAC is a Rust library providing useful technical indicators such as Simple Movin
 Implemented indicators :
 - [x] Simple Moving Average
 - [x] Exponential Moving Average
+- [x] Parabolic SAR
 
 *The project is licensed under the terms of the MIT License.*
 
