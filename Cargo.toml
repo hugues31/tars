@@ -1,0 +1,12 @@
+[package]
+name = "tac"
+version = "0.1.0"
+license = "MIT"
+authors = ["Hugues Gaillard <hugues.gaillard@me.com>"]
+description = """
+A Rust library providing useful technical indicators.
+"""
+keywords = [ "ta", "technical analysis", "trading", "algorithm", "indicator" ]
+readme = "README.md"
+
+[dependencies]
