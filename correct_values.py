@@ -1,15 +1,18 @@
 import numpy
 import talib
 
+decimals = 4
+
+
+
 def convert_array_to_vec(array):
-    array = array[numpy.logical_not(numpy.isnan(array))]
+    array = array[numpy.logical_not(numpy.isnan(array))].round(4)
     string = "["
     for elem in array:
         string += str(elem) + ", "
     string = string[:-2]
     string += "];"
     return string
-
 
 # Data series
 open = numpy.array([1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9, 2364.04,
@@ -22,12 +25,11 @@ close = numpy.array([1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.
                      2423.95, 2483.28, 2604.88, 2393.81, 2231.27, 2420.82, 2544.0, 2766.67, 2919.62, 2763.25, 2922.14])
 
 # Computation
-sma = talib.SMA(close, timeperiod=4).round(4)
-ema = talib.EMA(close, timeperiod=4).round(4)
+sma = talib.SMA(close, timeperiod=4)
+ema = talib.EMA(close, timeperiod=4)
+sar = talib.SAR(high, low, acceleration=0.02, maximum=0.2)
 
 # Printing
-#print("sma(close, 4) :" + str(sma))
-#print("ema(close, 4) :" + str(ema))
+print("let expected = &" + convert_array_to_vec(sar))
 
-print("let expected = &" + convert_array_to_vec(sma))
-
+print("Psar : " + str(psar(high, low)))

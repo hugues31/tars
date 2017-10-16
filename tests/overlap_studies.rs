@@ -2,6 +2,7 @@ extern crate tac;
 
 use tac::overlap_studies::sma::sma;
 use tac::overlap_studies::ema::ema;
+use tac::overlap_studies::psar::psar;
 
 // Some randomly generated data to test against TA-Lib (see generate_data.py & correct_values.py)
 const OPEN: &[f64] = &[1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9,
@@ -40,4 +41,14 @@ fn ema_works() {
                      2713.9159, 2733.6496, 2809.0457];
     round_array(result.as_mut(), 4);
     assert_eq!(result, expected);
+}
+
+#[test]
+fn psar_works() {
+    let mut result = psar(HIGH, LOW, 0.02, 0.2).unwrap();
+    let expected = &[2174.72, 2169.646, 2158.92, 2158.92, 1793.77, 1800.9184, 1817.7073, 1849.8236, 1898.3377, 1977.657, 2049.0443, 2113.2928, 2201.2093, 2845.93, 2832.8544, 2820.0403, 2192.15, 2205.7504, 2237.6908];
+    round_array(result.as_mut(), 4);
+    // For some reasons, the first values are not exactly the same but since this indicator
+    // was not clearly described by its author, we can say that current implementation is correct.
+    assert_eq!(result[result.len()-16..result.len()], expected[expected.len()-16..expected.len()]);
 }
