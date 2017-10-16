@@ -6,7 +6,7 @@ authors = ["Hugues Gaillard <hugues.gaillard@me.com>"]
 description = """
 A Rust library providing useful technical indicators.
 """
-keywords = [ "ta", "technical analysis", "trading", "algorithm", "indicator" ]
+keywords = [ "ta", "analysis", "trading", "algorithm", "indicator" ]
 readme = "README.md"
 
 [dependencies]
