@@ -1,0 +1,58 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+base_price	../generate_data.py	/^base_price = 1900$/;"	kind:variable	line:7
+base_price	../target/package/tac-0.1.0/generate_data.py	/^base_price = 1900$/;"	kind:variable	line:7
+close	../correct_values.py	/^close = numpy.array([1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9, 2364.04, 2543.32,$/;"	kind:variable	line:24
+close	../generate_data.py	/^close = list()$/;"	kind:variable	line:15
+close	../target/package/tac-0.1.0/correct_values.py	/^close = numpy.array([1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9, 2364.04, 2543.32,$/;"	kind:variable	line:24
+close	../target/package/tac-0.1.0/generate_data.py	/^close = list()$/;"	kind:variable	line:15
+close_str	../generate_data.py	/^close_str = ""$/;"	kind:variable	line:57
+close_str	../target/package/tac-0.1.0/generate_data.py	/^close_str = ""$/;"	kind:variable	line:57
+convert_array_to_vec	../correct_values.py	/^def convert_array_to_vec(array):$/;"	kind:function	line:8
+convert_array_to_vec	../target/package/tac-0.1.0/correct_values.py	/^def convert_array_to_vec(array):$/;"	kind:function	line:8
+correct_values.py	../correct_values.py	1;"	kind:file	line:1
+correct_values.py	../target/package/tac-0.1.0/correct_values.py	1;"	kind:file	line:1
+decimals	../correct_values.py	/^decimals = 4$/;"	kind:variable	line:4
+decimals	../target/package/tac-0.1.0/correct_values.py	/^decimals = 4$/;"	kind:variable	line:4
+ema	../correct_values.py	/^ema = talib.EMA(close, timeperiod=4)$/;"	kind:variable	line:29
+ema	../target/package/tac-0.1.0/correct_values.py	/^ema = talib.EMA(close, timeperiod=4)$/;"	kind:variable	line:29
+generate_data.py	../generate_data.py	1;"	kind:file	line:1
+generate_data.py	../target/package/tac-0.1.0/generate_data.py	1;"	kind:file	line:1
+high	../correct_values.py	/^high = numpy.array([2174.72, 2129.49, 2158.92, 2050.2, 2042.12, 2151.19, 2220.64, 2352.98, 2456.25,$/;"	kind:variable	line:20
+high	../generate_data.py	/^high = list()$/;"	kind:variable	line:13
+high	../target/package/tac-0.1.0/correct_values.py	/^high = numpy.array([2174.72, 2129.49, 2158.92, 2050.2, 2042.12, 2151.19, 2220.64, 2352.98, 2456.25,$/;"	kind:variable	line:20
+high	../target/package/tac-0.1.0/generate_data.py	/^high = list()$/;"	kind:variable	line:13
+high_str	../generate_data.py	/^high_str = ""$/;"	kind:variable	line:55
+high_str	../target/package/tac-0.1.0/generate_data.py	/^high_str = ""$/;"	kind:variable	line:55
+length	../generate_data.py	/^length = 20  # Length of the dataset$/;"	kind:variable	line:6
+length	../target/package/tac-0.1.0/generate_data.py	/^length = 20  # Length of the dataset$/;"	kind:variable	line:6
+low	../correct_values.py	/^low = numpy.array([1934.7, 1921.02, 1793.77, 1887.36, 1919.72, 1868.23, 1991.19, 2011.08, 2193.91,$/;"	kind:variable	line:22
+low	../generate_data.py	/^low = list()$/;"	kind:variable	line:14
+low	../target/package/tac-0.1.0/correct_values.py	/^low = numpy.array([1934.7, 1921.02, 1793.77, 1887.36, 1919.72, 1868.23, 1991.19, 2011.08, 2193.91,$/;"	kind:variable	line:22
+low	../target/package/tac-0.1.0/generate_data.py	/^low = list()$/;"	kind:variable	line:14
+low_str	../generate_data.py	/^low_str = ""$/;"	kind:variable	line:56
+low_str	../target/package/tac-0.1.0/generate_data.py	/^low_str = ""$/;"	kind:variable	line:56
+numpy	../correct_values.py	/^import numpy$/;"	kind:namespace	line:1
+numpy	../target/package/tac-0.1.0/correct_values.py	/^import numpy$/;"	kind:namespace	line:1
+open	../correct_values.py	/^open = numpy.array([1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9, 2364.04,$/;"	kind:variable	line:18
+open	../generate_data.py	/^open = list()$/;"	kind:variable	line:12
+open	../target/package/tac-0.1.0/correct_values.py	/^open = numpy.array([1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9, 2364.04,$/;"	kind:variable	line:18
+open	../target/package/tac-0.1.0/generate_data.py	/^open = list()$/;"	kind:variable	line:12
+open_str	../generate_data.py	/^open_str = ""$/;"	kind:variable	line:54
+open_str	../target/package/tac-0.1.0/generate_data.py	/^open_str = ""$/;"	kind:variable	line:54
+random	../generate_data.py	/^import random$/;"	kind:namespace	line:1
+random	../target/package/tac-0.1.0/generate_data.py	/^import random$/;"	kind:namespace	line:1
+rounding	../generate_data.py	/^rounding = 2  # decimals$/;"	kind:variable	line:9
+rounding	../target/package/tac-0.1.0/generate_data.py	/^rounding = 2  # decimals$/;"	kind:variable	line:9
+sar	../correct_values.py	/^sar = talib.SAR(high, low, acceleration=0.02, maximum=0.2)$/;"	kind:variable	line:30
+sar	../target/package/tac-0.1.0/correct_values.py	/^sar = talib.SAR(high, low, acceleration=0.02, maximum=0.2)$/;"	kind:variable	line:30
+sma	../correct_values.py	/^sma = talib.SMA(close, timeperiod=4)$/;"	kind:variable	line:28
+sma	../target/package/tac-0.1.0/correct_values.py	/^sma = talib.SMA(close, timeperiod=4)$/;"	kind:variable	line:28
+talib	../correct_values.py	/^import talib$/;"	kind:namespace	line:2
+talib	../target/package/tac-0.1.0/correct_values.py	/^import talib$/;"	kind:namespace	line:2
+volatility	../generate_data.py	/^volatility = 10  # in percent$/;"	kind:variable	line:8
+volatility	../target/package/tac-0.1.0/generate_data.py	/^volatility = 10  # in percent$/;"	kind:variable	line:8

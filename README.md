@@ -1,7 +1,7 @@
-![TAC!](tac.png)
+![TARS](tars.png)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-TAC is a Rust library providing useful technical indicators such as Simple Moving Average or Exponential Moving Average. This library is written in pure Rust and heavily tested against the reference library in the field, TA-Lib.
+TARS is a Rust library providing useful technical indicators such as Simple Moving Average or Exponential Moving Average. This library is written in pure Rust and heavily tested against the reference library in the field, TA-Lib.
 
 Implemented indicators :
 - [x] Simple Moving Average

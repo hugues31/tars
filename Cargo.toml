@@ -1,5 +1,5 @@
 [package]
-name = "tac"
+name = "tars"
 version = "0.1.0"
 license = "MIT"
 authors = ["Hugues Gaillard <hugues.gaillard@me.com>"]

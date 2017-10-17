@@ -1,8 +1,8 @@
-extern crate tac;
+extern crate tars;
 
-use tac::overlap_studies::sma::sma;
-use tac::overlap_studies::ema::ema;
-use tac::overlap_studies::psar::psar;
+use tars::overlap_studies::sma::sma;
+use tars::overlap_studies::ema::ema;
+use tars::overlap_studies::psar::psar;
 
 // Some randomly generated data to test against TA-Lib (see generate_data.py & correct_values.py)
 const OPEN: &[f64] = &[1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9,
