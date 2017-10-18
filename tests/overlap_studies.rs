@@ -4,6 +4,8 @@ use tars::overlap_studies::sma::sma;
 use tars::overlap_studies::ema::ema;
 use tars::overlap_studies::psar::psar;
 
+use tars::helpers::round_array;
+
 // Some randomly generated data to test against TA-Lib (see generate_data.py & correct_values.py)
 const OPEN: &[f64] = &[1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9,
                        2364.04, 2543.32, 2423.95, 2483.28, 2604.88, 2393.81, 2231.27, 2420.82,
@@ -18,17 +20,12 @@ const CLOSE: &[f64] = &[1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 22
                         2543.32, 2423.95, 2483.28, 2604.88, 2393.81, 2231.27, 2420.82, 2544.0,
                         2766.67, 2919.62, 2763.25, 2922.14];
 
-fn round_array(array: &mut [f64], decimals: u8) {
-    let divider = (10.0 as f64).powi(decimals as i32);
-    for number in array {
-        *number = (*number * divider).round() / divider;
-    }
-}
-
 #[test]
 fn sma_works() {
     let mut result = sma(CLOSE, 4).unwrap();
-    let expected = &[1997.455, 2028.185, 2070.21, 2115.675, 2214.3025, 2329.445, 2383.0525, 2453.6475, 2513.8575, 2476.48, 2428.31, 2412.695, 2397.475, 2490.69, 2662.7775, 2748.385, 2842.92];
+    let expected = &[1997.455, 2028.185, 2070.21, 2115.675, 2214.3025, 2329.445, 2383.0525,
+                     2453.6475, 2513.8575, 2476.48, 2428.31, 2412.695, 2397.475, 2490.69,
+                     2662.7775, 2748.385, 2842.92];
     round_array(result.as_mut(), 4);
     assert_eq!(result, expected);
 }
@@ -46,9 +43,12 @@ fn ema_works() {
 #[test]
 fn psar_works() {
     let mut result = psar(HIGH, LOW, 0.02, 0.2).unwrap();
-    let expected = &[2174.72, 2169.646, 2158.92, 2158.92, 1793.77, 1800.9184, 1817.7073, 1849.8236, 1898.3377, 1977.657, 2049.0443, 2113.2928, 2201.2093, 2845.93, 2832.8544, 2820.0403, 2192.15, 2205.7504, 2237.6908];
+    let expected = &[2174.72, 2169.646, 2158.92, 2158.92, 1793.77, 1800.9184, 1817.7073,
+                     1849.8236, 1898.3377, 1977.657, 2049.0443, 2113.2928, 2201.2093, 2845.93,
+                     2832.8544, 2820.0403, 2192.15, 2205.7504, 2237.6908];
     round_array(result.as_mut(), 4);
     // For some reasons, the first values are not exactly the same but since this indicator
     // was not clearly described by its author, we can say that current implementation is correct.
-    assert_eq!(result[result.len()-16..result.len()], expected[expected.len()-16..expected.len()]);
+    assert_eq!(result[result.len() - 16..result.len()],
+               expected[expected.len() - 16..expected.len()]);
 }

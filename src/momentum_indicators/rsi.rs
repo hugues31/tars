@@ -9,7 +9,7 @@ pub fn rsi(data: &[f64], period: usize) -> Result<Vec<f64>, Err> {
     }
 
     let mut changes = Vec::new();
-    for i in 0..data.len()-1 {
+    for i in 0..data.len() - 1 {
         let change = data[i + 1] - data[i];
         changes.push(change);
     }
@@ -26,12 +26,10 @@ pub fn rsi(data: &[f64], period: usize) -> Result<Vec<f64>, Err> {
         if changes[i] > 0.0 {
             gains.push(changes[i]);
             losses.push(0.0);
-        }
-        else if changes[i] < 0.0 {
+        } else if changes[i] < 0.0 {
             losses.push(changes[i] * -1.0);
             gains.push(0.0);
-        }
-        else {
+        } else {
             gains.push(0.0);
             gains.push(0.0);
         }
@@ -42,8 +40,7 @@ pub fn rsi(data: &[f64], period: usize) -> Result<Vec<f64>, Err> {
 
     if avg_loss == 0.0 {
         rsis[0] = 100.0;
-    }
-    else {
+    } else {
         let rs = avg_gain / avg_loss;
         rsis[0] = 100.0 - (100.0 / (1.0 + rs));
     }
@@ -52,17 +49,13 @@ pub fn rsi(data: &[f64], period: usize) -> Result<Vec<f64>, Err> {
         avg_gain = (avg_gain * (period - 1) as f64 + gains[i + (period - 1)]) / period as f64;
         avg_loss = (avg_loss * (period - 1) as f64 + losses[i + (period - 1)]) / period as f64;
 
-
-
         if avg_loss == 0.0 {
             rsis[i] = 100.0;
-        }
-        else {
+        } else {
             let rs = avg_gain / avg_loss;
             rsis[i] = 100.0 - (100.0 / (1.0 + rs));
         }
     }
-    
 
     Ok(rsis)
 }

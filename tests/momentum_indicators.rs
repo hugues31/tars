@@ -1,6 +1,7 @@
 extern crate tars;
 
 use tars::momentum_indicators::rsi::rsi;
+use tars::helpers::round_array;
 
 // Some randomly generated data to test against TA-Lib (see generate_data.py & correct_values.py)
 const OPEN: &[f64] = &[1984.03, 1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.9,
@@ -16,17 +17,11 @@ const CLOSE: &[f64] = &[1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 22
                         2543.32, 2423.95, 2483.28, 2604.88, 2393.81, 2231.27, 2420.82, 2544.0,
                         2766.67, 2919.62, 2763.25, 2922.14];
 
-fn round_array(array: &mut [f64], decimals: u8) {
-    let divider = (10.0 as f64).powi(decimals as i32);
-    for number in array {
-        *number = (*number * divider).round() / divider;
-    }
-}
-
 #[test]
 fn rsi_works() {
     let mut result = rsi(CLOSE, 6).unwrap();
-    let expected = &[79.9771, 86.5336, 90.5949, 73.0035, 75.8056, 80.7258, 56.706, 44.4766, 57.3488, 63.879, 72.8847, 77.5072, 64.1009, 70.3536];
+    let expected = &[79.9771, 86.5336, 90.5949, 73.0035, 75.8056, 80.7258, 56.706, 44.4766,
+                     57.3488, 63.879, 72.8847, 77.5072, 64.1009, 70.3536];
     round_array(result.as_mut(), 4);
     assert_eq!(result, expected);
 }

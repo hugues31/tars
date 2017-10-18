@@ -10,7 +10,9 @@ use error::Err;
 pub fn psar(high: &[f64], low: &[f64], iaf: f64, maxaf: f64) -> Result<Vec<f64>, Err> {
     let mut psar = vec![NAN; high.len()];
 
-    if high.len() < 2 { return Err(Err::NotEnoughtData) };
+    if high.len() < 2 {
+        return Err(Err::NotEnoughtData);
+    };
 
     let mut long = false;
     if high[0] + low[0] <= high[1] + low[1] {
@@ -23,8 +25,7 @@ pub fn psar(high: &[f64], low: &[f64], iaf: f64, maxaf: f64) -> Result<Vec<f64>,
     if long {
         extreme = high[0];
         sar = low[0];
-    }
-    else {
+    } else {
         extreme = low[0];
         sar = high[0];
     }
@@ -37,28 +38,41 @@ pub fn psar(high: &[f64], low: &[f64], iaf: f64, maxaf: f64) -> Result<Vec<f64>,
         sar = (extreme - sar) * af + sar;
 
         if long {
-            if i >= 2 && (sar > low[i - 2]) { sar = low[i-2] };
-            if sar > low[i - 1] { sar = low[i-1] };
+            if i >= 2 && (sar > low[i - 2]) {
+                sar = low[i - 2]
+            };
+            if sar > low[i - 1] {
+                sar = low[i - 1]
+            };
 
             if af < maxaf && high[i] > extreme {
                 af += iaf;
-                if af > maxaf { af = maxaf };
+                if af > maxaf {
+                    af = maxaf
+                };
             }
 
             if high[i] > extreme {
                 extreme = high[i];
             }
-        }
-        else {
-            if i >= 2 && sar < high[i - 2] { sar = high[i - 2] };
-            if sar < high[i - 1] { sar = high[i - 1] };
+        } else {
+            if i >= 2 && sar < high[i - 2] {
+                sar = high[i - 2]
+            };
+            if sar < high[i - 1] {
+                sar = high[i - 1]
+            };
 
             if af < maxaf && low[i] < extreme {
                 af += iaf;
-                if af > maxaf { af = maxaf };
+                if af > maxaf {
+                    af = maxaf
+                };
             }
 
-            if low[i] < extreme { extreme = low[i] };
+            if low[i] < extreme {
+                extreme = low[i]
+            };
         }
 
         if long && low[i] < sar || !long && high[i] > sar {
@@ -69,8 +83,7 @@ pub fn psar(high: &[f64], low: &[f64], iaf: f64, maxaf: f64) -> Result<Vec<f64>,
 
             if !long {
                 extreme = low[i];
-                }
-            else {
+            } else {
                 extreme = high[i];
             }
         }
