@@ -17,8 +17,8 @@ pub fn psar(high: &[f64], low: &[f64], iaf: f64, maxaf: f64) -> Result<Vec<f64>,
         long = true;
     }
 
-    let mut sar = 0.0;
-    let mut extreme = 0.0;
+    let mut sar;
+    let mut extreme;
 
     if long {
         extreme = high[0];
