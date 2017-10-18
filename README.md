@@ -2,6 +2,8 @@
 
 [![crates.io](https://img.shields.io/crates/v/tars.svg)](https://crates.io/crates/tars)
 [![Downloads from crates.io](https://img.shields.io/crates/d/tars.svg)](https://crates.io/crates/tars)
+[![Build Status](https://travis-ci.org/hugues31/tars.svg?branch=master)](https://travis-ci.org/hugues31/tars)
+[![doc.rs](https://docs.rs/tars/badge.svg)](https://docs.rs/tars/)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 TARS is a Rust library providing useful technical indicators such as Simple Moving Average or Exponential Moving Average. This library is written in pure Rust and heavily tested against the reference library in the field, TA-Lib.
