@@ -28,8 +28,7 @@ close = numpy.array([1959.83, 2041.42, 2019.04, 1969.53, 2082.75, 2209.52, 2200.
 sma = talib.SMA(close, timeperiod=4)
 ema = talib.EMA(close, timeperiod=4)
 sar = talib.SAR(high, low, acceleration=0.02, maximum=0.2)
+rsi = talib.RSI(close, timeperiod = 6)
 
 # Printing
-print("let expected = &" + convert_array_to_vec(sar))
-
-print("Psar : " + str(psar(high, low)))
+print("let expected = &" + convert_array_to_vec(rsi))

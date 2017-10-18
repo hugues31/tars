@@ -10,6 +10,7 @@ Implemented indicators :
 - [x] Simple Moving Average
 - [x] Exponential Moving Average
 - [x] Parabolic SAR
+- [x] RSI
 
 *The project is licensed under the terms of the MIT License.*
 
