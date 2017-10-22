@@ -31,7 +31,7 @@ pub fn rsi(data: &[f64], period: usize) -> Result<Vec<f64>, Err> {
             gains.push(0.0);
         } else {
             gains.push(0.0);
-            gains.push(0.0);
+            losses.push(0.0);
         }
     }
 

@@ -1,6 +1,6 @@
 [package]
 name = "tars"
-version = "0.1.2"
+version = "0.1.3"
 license = "MIT"
 authors = ["Hugues Gaillard <hugues.gaillard@me.com>"]
 description = """
